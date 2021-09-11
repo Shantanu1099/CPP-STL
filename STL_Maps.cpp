@@ -17,7 +17,7 @@ void iterMap(map<int, int> mm){
 int main(){ 
 // While initialising strings as keys the T.C. increases to O(s.size()*log(n)) while insertion b'coz of the self/lexiographical sorting technique of Red-Black Trees in the keys part....That's why it is an ordered 'map'...
 
-// IN case of  'unordered_map <int, string> mmm;'  Everything is same except -> Inbuilt Implementation which is Hashmap.. and because Hashmap is used so Insertion and Accessement T.C. -> turns O(1) & keys datatypes -> Cannot use complex datatypes such as Containers must use int, float, long long, double these already defined fixed size Datatypes....
+// IN case of  'unordered_map <int, string> mmm;'  Everything is same except -> Inbuilt Implementation which is Hashmap.. and because Hashmap is used so Insertion and Accessement T.C. -> turns O(1) & keys datatypes -> Cannot use complex datatypes, Containers must use int, float, long long, double these already defined fixed size Datatypes....
 
 
 // The major difference of 'multimap<int, string> mmmm;' when compared to maps is that it can store multiple similar value of key... The concept of Unique Key isn't available here..        You can do the same thing using map as well like.... map<int, vector<string> > mmod;
@@ -30,14 +30,17 @@ int main(){
 // }
 
 
-map< int, int> m;   // Can put any Container inside the < > thing... keys rae unique..i.e. There can'r be same key for multiple values...Cannot store more than 1 value...& that will be the latest Assigned value
+map< int, int> m;   // Can put any Container inside the < > thing... keys are unique..i.e. There can't be same key for multiple values...Cannot store more than 1 value...& that will be the latest Assigned value
 m[1] = 67;
 m[5] = 432;
 m[4] = 2323;
 m.insert({3, 222}); //inserting pair....
 m[3]; // Inserting a key as well takes a time of (O(log n)) & so does Accessing it.
+for(auto k_v : m){
+	cout << k_v.first << " " << k_v.second << endl;
+}
 
-auto it = m.find(8);  // O(log(n))
+auto it = m.find(7);  // O(log(n))
 
 if( it != m.end()){   // Gives Segmentation Fault when Any value at or beyond m.end() is Accessed
 m.erase(it); // O(log(n))

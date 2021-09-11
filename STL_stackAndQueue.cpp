@@ -56,5 +56,6 @@ int main(){
 		cout << q.front() << endl;
 		q.pop();
 	}
+	cout << "Popped Queue" << endl;
 	return 0;
 }

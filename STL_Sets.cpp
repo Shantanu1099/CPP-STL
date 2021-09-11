@@ -10,7 +10,7 @@ using namespace std;
 // Always keep OVERFLOW of DATATYPESin MIND
 // Sets are just maps without the {values} part in it. -> Self balancing keys -> BST
 
-void printSet(multiset<string> s){  //u cam keep any datatype insie SET -> Even Complex containers
+void printSet(multiset<string> s){  //u can keep any datatype inside SET -> Even Complex containers
 	for(string value : s){
 		cout << value << endl;
 	}
@@ -22,10 +22,14 @@ int main(){
 // unordered_set<primitive types> us; no sorting in element similar to un..maps;  CAn be used for finding the presence of any key in SET..  ALL T>C -> O(1) HASH Tables are used..
 
 // set<string> s;
-// s.insert("LOL");	 // O(log(n)) - Red-Black Trees are used in Set as in Maps.
+// s.insert("LOL");	 // O(log(n)) - Red-Black Trees are used in Set as in Maps. SO lexicographical Sorting is done among keys 
+	
 // s.insert("HAHAHAH");
 // s.insert("DAMN BRO");
 // cout << "Previous Set :" << endl;
+// for(auto & k : s){
+// 	cout << k << endl;
+// }
 
 
 // Multisets
